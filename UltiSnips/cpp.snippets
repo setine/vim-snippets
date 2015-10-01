@@ -5,6 +5,14 @@ extends c
 # We want to overwrite everything in parent ft.
 priority -49
 
+snippet uniqf "Uniqfeed header"
+/** ${1:`!p snip.rv = snip.fn`}
+ * Copyright UniqFEED AG, by ${2:Ulrich Mueller}
+ * $Id: 26e0b9ac5cbc168849b761a955e487ba5f45e3fd $
+ */
+ ${0}
+endsnippet
+
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
@@ -16,7 +24,7 @@ snippet cl "class .. (class)"
 class ${1:`!p snip.rv = snip.basename or "name"`}
 {
 public:
-	${1/(\w+).*/$1/} (${2:arguments});
+	${1/(\w+).*/$1/}(${2:arguments});
 	virtual ~${1/(\w+).*/$1/} ();
 
 private:
